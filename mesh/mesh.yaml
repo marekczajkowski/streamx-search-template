@@ -99,16 +99,9 @@ edge:
             ref: "outbox.indexable-resources"
           indexable-resource-fragments:
             ref: "outbox.indexable-resource-fragments"
-        environmentFrom:
-          secrets:
-          - "encrypted/opensearch-sink.properties"
         volumesFrom:
           configs:
           - "opensearch/service-init:/deployments/opensearch/service-init/additional"
-      opensearch:
-        environmentFrom:
-          secrets:
-          - "encrypted/opensearch-sink-opensearch.properties"
 
 networking:
   httpRoutes:
